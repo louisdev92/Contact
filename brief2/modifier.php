@@ -2,7 +2,7 @@
 global $pdo;
 require 'config.php';
 
-// Ajout d'un produit
+// Ajoutez
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {
     $nom = $_POST['nom'];
@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {
     $stmt->execute(['nom' => $nom, 'prix' => $prix, 'stock' => $stock]);
 }
 
-// Suppression d'un produit
+// Suppression
 if (isset($_GET['supprimer'])) {
     $id = $_GET['supprimer'];
     $query = "DELETE FROM produits WHERE id = :id";
@@ -24,7 +24,7 @@ if (isset($_GET['supprimer'])) {
     exit;
 }
 
-// Modification d'un produit
+// Modification
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['modifier'])) {
     $id = $_POST['id'];
     $nom = $_POST['nom'];
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['modifier'])) {
     exit;
 }
 
-// Récupération des produits
+// Récupérez les produits
 $query = "SELECT * FROM produits";
 $stmt = $pdo->query($query);
 $produits = $stmt->fetchAll();
@@ -102,7 +102,7 @@ $produits = $stmt->fetchAll();
     }
 </script>
 <div>
-    <a href="index.php" class="retour"><button>retour</button></a>
+    <a href="index.php" class="Retour"><button>Retour</button></a>
 </div>
 </body>
 </html>

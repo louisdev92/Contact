@@ -2,7 +2,7 @@
 global $pdo;
 require 'config.php';
 
-// Ajout d'un produit
+// Ajoutez
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {
     $nom = $_POST['nom'];
     $prix = $_POST['prix'];
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {
     $stmt->execute(['nom' => $nom, 'prix' => $prix, 'stock' => $stock]);
 }
 
-// Suppression d'un produit
+// Suppression
 if (isset($_GET['supprimer'])) {
     $id = $_GET['supprimer'];
     $query = "DELETE FROM produits WHERE id = :id";
@@ -23,7 +23,7 @@ if (isset($_GET['supprimer'])) {
     exit;
 }
 
-// Récupération des produits
+// Récupérez les produits
 $query = "SELECT * FROM produits";
 $stmt = $pdo->query($query);
 $produits = $stmt->fetchAll();
