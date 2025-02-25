@@ -23,7 +23,7 @@ if (isset($_GET['supprimer'])) {
     exit;
 }
 
-// Récupérez les produitss
+// Récupérez les produits
 $query = "SELECT * FROM produits";
 $stmt = $pdo->query($query);
 $produits = $stmt->fetchAll();
