@@ -101,5 +101,6 @@ $produits = $stmt->fetchAll();
         document.getElementById('edit_stock').value = stock;
     }
 </script>
+<button><a href="index.php" class="retour">retour</a></button>
 </body>
 </html>

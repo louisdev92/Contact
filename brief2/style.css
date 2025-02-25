@@ -8,7 +8,7 @@ body {
 h1 {
     color: #880000;
     font-family: "Linux Libertine Display G";
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 form {
@@ -45,16 +45,29 @@ table {
 th, td {
     padding: 10px;
     border: 1px solid #ddd;
-    text-align: left;
+    text-align: center;
+
 }
 
 th {
     background: #696868;
     color: white;
+    font-family:"Script MT";
+    font-size: 1.5rem;
+}
+
+td {
+    font-family: "Matura MT Script";
+    font-size: 1rem;
 }
 
 a {
     color: #dc3545;
+    text-decoration: none;
+}
+
+.retour {
+    color: #ffffff;
     text-decoration: none;
 }
 
