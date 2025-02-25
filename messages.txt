@@ -1,7 +1,0 @@
-test | jean.dupont2@mail.com | test
-test | jean.dupont2@mail.com | test2
-test | jean.dupont2@mail.com | test
-test | jean.dupont2@mail.com | test
-test | jean.dupont2@mail.com | test33
-test | jean.dupont2@mail.com | test
-test | jean.dupont2@mail.com | je suis un nouveau test
