@@ -56,6 +56,7 @@ $produits = $stmt->fetchAll();
             <td><?= htmlspecialchars($produit['stock']) ?></td>
             <td>
                 <a href="modifier.php?id=<?= $produit['id'] ?>">Modifier</a>
+                |
                 <a href="?supprimer=<?= $produit['id'] ?>" onclick="return confirm('Supprimer ce produit ?');">Supprimer</a>
             </td>
         </tr>
