@@ -23,9 +23,9 @@ $query = "SELECT * FROM auteur";
 $stmt  = $pdo -> query($query);
 
 // Récupération des données (tableau associatif)
-$auteurs = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+$auteur = $stmt -> fetchAll(PDO::FETCH_ASSOC);
 
-print_r($auteurs);
+//print_r($auteurs);
 
 ?>
 <!doctype html>
@@ -34,6 +34,7 @@ print_r($auteurs);
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
     <title>Liste des livres</title>
 </head>
 <body>
@@ -47,6 +48,15 @@ print_r($auteurs);
             </tr>
             </thead>
             <tbody>
+            <!-- PHP -->
+            <?php foreach ($auteur as $a): ?>
+                <tr>
+                    <td><?= htmlspecialchars($a['id']) ?></td>
+                    <td><?= htmlspecialchars($a['nom']) ?></td>
+                    <td><?= htmlspecialchars($a['prenom']) ?></td>
+                    <td><?= htmlspecialchars($a['date_naissance']) ?></td>
+                </tr>
+            <?php endforeach; ?>
 
             </tbody>
         </table>
