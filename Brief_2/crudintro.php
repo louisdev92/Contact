@@ -38,6 +38,7 @@ $auteur = $stmt -> fetchAll(PDO::FETCH_ASSOC);
     <title>Liste des livres</title>
 </head>
 <body>
+        <?php if(!empty($auteur)): ?>
         <table>
             <thead>
             <tr>
@@ -60,5 +61,10 @@ $auteur = $stmt -> fetchAll(PDO::FETCH_ASSOC);
 
             </tbody>
         </table>
+
+<?php else: ?>
+<p>Aucun auteur</p>
+<?php endif; ?>
+
 </body>
 </html>
