@@ -12,12 +12,10 @@ if (isset($_GET['id'])) {
         exit;
     }
 
-
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $nom = $_POST['nom'];
         $prix = $_POST['prix'];
         $stock = $_POST['stock'];
-
 
         $produit->modifier($id, $nom, $prix, $stock);
 
