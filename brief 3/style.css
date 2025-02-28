@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #880000;
+    font-family: "Linux Libertine Display G";
+    font-size: 2rem;
+}
+
+form {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+input, button {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #2850a7;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #212f88;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+
+}
+
+th {
+    background: #696868;
+    color: white;
+    font-family:"Script MT";
+    font-size: 1.5rem;
+}
+
+td {
+    font-family: "Matura MT Script";
+    font-size: 1rem;
+}
+
+a {
+    color: #dc3545;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.retour {
+    color: #ffffff;
+    text-decoration: none;
+}

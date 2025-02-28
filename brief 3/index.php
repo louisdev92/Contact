@@ -22,6 +22,7 @@ $produits = $produit->lister();
         <th>Nom</th>
         <th>Prix</th>
         <th>Stock</th>
+        <th>Action</th>
     </tr>
     <?php foreach ($produits as $produit) : ?>
         <tr>
