@@ -43,7 +43,19 @@ class Produit {
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-/** Ajout d'un nouveau produit dans la bdd
+    public function getProduitById($id) {
+        try {
+            $stmt = $this->pdo->prepare("SELECT * FROM produits WHERE id = :id");
+            $stmt->execute(['id' => (int)$id]);
+            return $stmt->fetch(PDO::FETCH_ASSOC); // Retourne le produit sous forme de tableau associatif
+        } catch (PDOException $e) {
+            error_log("Erreur lors de la récupération du produit: " . $e->getMessage());
+            return false;
+        }
+    }
+
+
+    /** Ajout d'un nouveau produit dans la bdd
      *@param string $nom Le nom du produit
      *@param float $prix Le Prix
      *@param int $stock La quantité
